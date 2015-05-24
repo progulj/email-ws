@@ -29,8 +29,7 @@ public class EmailRestController {
 		} catch (Exception e) {
 
 			e.printStackTrace();
-			return Response.status(452).entity("Email not sended!").header("Access-Control-Allow-Origin", "*")
-					.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT").build();
+			return Response.status(452).entity("Email not sended!").build();
 		}
 
 	}
