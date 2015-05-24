@@ -108,7 +108,7 @@ public class SendEmail {
 	    WebResource webResource =
 	        client.resource(webRes);
 	    MultivaluedMapImpl formData = new MultivaluedMapImpl();
-	    formData.add("from", email.getName()+" "+email.getLastName()+" <"+email.getEmailFrom()+">");
+	    formData.add("from", email.getName()+" <"+email.getEmailFrom()+">");
 	    formData.add("to", email.getEmailTo());
 	    formData.add("subject", email.getSubject());
 	    formData.add("text", email.getMessage());
