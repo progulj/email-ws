@@ -5,7 +5,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement (name = "email")
 public class Email {
 
-    
+    private String name;
+    private String lastName;
     private String emailTo;
     private String emailFrom;
     private String message;
@@ -42,6 +43,24 @@ public class Email {
     public void setPassword(String password) {
 	this.password = password;
     }
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
 	@Override
 	public String toString() {
 		return "Email [emailTo=" + emailTo + ", emailFrom=" + emailFrom
